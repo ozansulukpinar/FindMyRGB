@@ -6,4 +6,6 @@ This is a single-player game so it can only be played by one person. The aim of 
 
 Have fun!
 
-![game](https://user-images.githubusercontent.com/52232302/103490023-05edde00-4e2a-11eb-983c-eac7fc1dae86.jpg)
+![game](https://user-images.githubusercontent.com/52232302/103490720-c249a300-4e2e-11eb-926c-eb868a55d3eb.jpg)
+
+![game - 2](https://user-images.githubusercontent.com/52232302/103490730-d68da000-4e2e-11eb-8fbe-83791861b743.jpg)
