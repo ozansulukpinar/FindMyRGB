@@ -1,0 +1,16 @@
+﻿#gameName {
+    font-size: 36px;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+div {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
