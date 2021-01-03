@@ -53,7 +53,6 @@ function drawGame() {
         div.style.height = "50px";
         div.style.backgroundColor =
             "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
-        div.innerHTML = "" + x + "-" + y;
 
         div.setAttribute("class", "r" + x);
         div.setAttribute("id", "c" + y);
