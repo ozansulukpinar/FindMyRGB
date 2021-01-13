@@ -53,6 +53,7 @@ function drawGame() {
         div.style.height = "50px";
         div.style.backgroundColor =
             "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
+        div.innerHTML = "" + x + "-" + y;
 
         div.setAttribute("class", "r" + x);
         div.setAttribute("id", "c" + y);
@@ -122,29 +123,33 @@ document.body.onmousedown = function (e) {
             lostAlertMessage = "";
     }
 
-    if (correctBoxName == clickedBoxName) {
-        score++;
+    //Focus only boxes
+    if (clickedBoxName.length >= 4 && clickedBoxName.length <= 6) {
 
-        //Change correct box
-        do {
-            newRandomNumberInArray = Math.floor(Math.random() * numberOfBoxes);
-        } while (newRandomNumberInArray == randomNumberInArray);
+        if (correctBoxName == clickedBoxName) {
+            score++;
 
-        correctBoxName = boxesNames[newRandomNumberInArray];
+            //Change correct box
+            do {
+                newRandomNumberInArray = Math.floor(Math.random() * numberOfBoxes);
+            } while (newRandomNumberInArray == randomNumberInArray);
 
-        //Edit heading
-        document.getElementById("heading").innerHTML = "Which color has RGB(" + redCodes[newRandomNumberInArray] + "," + greenCodes[newRandomNumberInArray] + "," + blueCodes[newRandomNumberInArray] + ") color code?"; document.getElementById("heading").style.fontSize = "24px";
-        document.getElementById("heading").style.fontWeight = "bold";
+            correctBoxName = boxesNames[newRandomNumberInArray];
 
-        //Edit score
-        document.getElementById("score").innerHTML = "Score: " + score;
-        document.getElementById("score").style.fontSize = "18px";
-        document.getElementById("score").style.fontWeight = "bold";
+            //Edit heading
+            document.getElementById("heading").innerHTML = "Which color has RGB(" + redCodes[newRandomNumberInArray] + "," + greenCodes[newRandomNumberInArray] + "," + blueCodes[newRandomNumberInArray] + ") color code?"; document.getElementById("heading").style.fontSize = "24px";
+            document.getElementById("heading").style.fontWeight = "bold";
 
-    } else {
-        //Answer is false
-        alert(lostAlertMessage);
-        refreshPage();
+            //Edit score
+            document.getElementById("score").innerHTML = "Score: " + score;
+            document.getElementById("score").style.fontSize = "18px";
+            document.getElementById("score").style.fontWeight = "bold";
+
+        } else {
+            //Answer is false
+            alert(lostAlertMessage);
+            refreshPage();
+        }
     }
 
     if (score == 5) {
